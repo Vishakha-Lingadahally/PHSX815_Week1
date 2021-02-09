@@ -81,7 +81,8 @@ if __name__ == "__main__":
     myx = []
     for i in range(0,N):
         myx.append(random.rand())
-#create file
+        
+    #create file
     np.savetxt("random1.txt", myx, fmt="%s")
     with open("random1.txt") as f:
       v = np.loadtxt(f, delimiter=",", dtype='float', comments="#", skiprows=1, usecols=None)
@@ -89,7 +90,7 @@ if __name__ == "__main__":
       fig=plt.figure
      
     # create histogram of our data
-    n, bins, patches = plt.hist(v_hist, 50, density=True, facecolor='g', alpha=0.75)
+    n, bins, patches = plt.hist(v_hist, 50, density=True, facecolor='y', alpha=1)
 
     # plot formating options
     plt.xlabel('x')
